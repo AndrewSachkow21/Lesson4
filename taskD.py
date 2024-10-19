@@ -4,8 +4,7 @@ def middle_mark(b):
         result += int(i)
     return result/len(b)
 def ocinka(d,*b):
-    list = []
-    for i in range(d):
-        list.append(b[i].split())
+    list = [b[i].split() for i in range(d)]
     dict_marks={v[0]:middle_mark(v[1: ]) for v in list}
-ocinka(2,"ivanov 5 4 6","danichkin 3 4 5")
+    return dict_marks
+print(ocinka(2,"ivanov 5 4 6","danichkin 3 4 5"))
