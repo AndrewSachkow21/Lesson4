@@ -1,10 +1,7 @@
 def list_remove(N,list,P):
-    list2 = list
-    
-    print(list2)
+    list2 = list.split()
     output = list2.copy()
     for i in list2:
-        print(int(i) == P,P,i)
         if int(i) == P:
             output.remove(i)
     return output
