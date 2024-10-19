@@ -1,12 +1,6 @@
 def list_remove(N,list,P):
-    list2 = []
-    d = ""
-    for b in list:
-        if b != " ":
-            d += b
-        elif b == " ":
-            list2.append(d)
-            d = ""
+    list2 = list
+    
     print(list2)
     output = list2.copy()
     for i in list2:
