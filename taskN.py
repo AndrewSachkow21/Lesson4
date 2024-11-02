@@ -2,11 +2,17 @@ queue = []
 while True:
     command = input("-->").strip()
     try:
-        if command.startswith("push"):
+        if command.startswith("push_front"):
             number = int(command.split()[1])
             queue.append(number)
             print("ok")
-        elif command == "pop":
+        elif command.startswith("push_back"):
+            number = int(command.split()[1])
+            queue = [number] + queue
+            print("ok")
+        elif command == "pop_front":
+            print(queue.pop(len(queue)-1))
+        elif command == "pop_back":
             print(queue.pop(0))
         elif command == "size":
             print(len(queue))
